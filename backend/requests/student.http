@@ -1,0 +1,47 @@
+
+###
+//login for student
+post http://localhost:4000/student-app/login
+Content-Type: application/json
+
+{
+    "userId" : "1234",
+    "password"  : "ravi"
+}
+
+
+###
+//getting his own attendance
+get http://localhost:4000/student-app/attendance/1234
+
+###
+//submitting his own leave
+post http://localhost:4000/student-app/leave
+Content-Type: application/json
+
+{
+    "userId" : "1234",
+    "name" : "sunny",
+    "subject" : "cough",
+    "fromDate" : "2024-06-12",
+    "toDate" : "2024-06-15",
+    "description" : "high fever",
+    "approval" : "pending",
+    "email" : "rithvikvarma2541@gmail.com"
+}
+
+###
+//how many classes to make 75
+get http://localhost:4000/student-app/attendanceReq/1234
+
+
+###
+get http://localhost:4000/student-app/announcements
+
+
+###
+get http://localhost:4000/student-app/holidays
+
+
+###
+get http://localhost:4000/student-app/courses

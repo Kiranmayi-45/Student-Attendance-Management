@@ -1,0 +1,102 @@
+//admin registration
+post http://localhost:4000/admin-app/registration
+Content-Type: application/json
+
+{
+    "userId" : "1234",
+    "password" : "1234"
+}
+
+###
+//admin login
+post http://localhost:4000/admin-app/login
+Content-Type: application/json
+
+{
+    "userId" : "ravi",
+    "password" : "ravi"
+}
+
+
+###
+//teacher registration
+post http://localhost:4000/admin-app/teacher-registration
+Content-Type: application/json
+
+{
+    "userId" : "12344",
+    "name" : "ravi",
+    "email" : "rithvikvarma2541@gmail.com",
+    "password" : "ravii",
+    "department" : "it",
+    "phone" : "123456789"   
+}
+
+
+###
+//student registration
+post http://localhost:4000/admin-app/student-registration
+Content-Type: application/json
+
+{
+    "userId" : "34",
+    "name" : "kiran",
+    "email" : "rithvikvarma2541@gmail.com",
+    "class" : "it-a",
+    "password" : "1234",
+    "phone" : "123456789"
+
+}
+
+###
+//holidays post
+post http://localhost:4000/admin-app/holidays
+Content-Type: application/json
+
+{
+    "date" : "2024-06-12",
+    "day" : "Saturday",
+    "occasion" : "Maqsad"
+}
+
+###
+//courses
+post http://localhost:4000/admin-app/courses
+Content-Type: application/json
+
+{
+    "title" : "MERN STACK",
+    "Duration" : "3 months",
+    "Last Date" : "2024-11-11",
+    "Fee" : 50000
+}
+
+
+###
+//reset password
+put http://localhost:4000/admin-app/reset-password
+Content-Type: application/json
+
+{
+    "userId" : "1234",
+    "oldPassword" : "1234",
+    "newPassword" : "1233"
+}
+
+
+###
+//forgot password
+post http://localhost:4000/admin-app/forgot-password
+Content-Type: application/json
+
+{
+    "userId" : 1234,
+
+}
+
+###student details
+get http://localhost:4000/admin-app/student-details
+
+###
+//teacher details
+get http://localhost:4000/admin-app/teacher-details

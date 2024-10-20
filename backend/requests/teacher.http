@@ -1,0 +1,111 @@
+//get all students
+get http://localhost:4000/teacher-app/allstudents
+
+
+
+###
+//login for teacher
+post http://localhost:4000/teacher-app/login
+Content-Type: application/json
+
+{
+    "userId" : "12345",
+    "password"  : "ravii"
+}
+
+
+###
+//mark attendance for students
+post http://localhost:4000/teacher-app/markAttendance
+Content-Type: application/json
+
+[
+    {
+        "userId" : "1234",
+        "name" : "Rithvik",
+        "date" : "",
+        "present" : true,
+        "totalClasses" : 0,
+        "classesPresent" : 0,
+        "percentage" : 0.00
+    },
+    {
+        "userId" : "1234",
+        "name" : "Rithvik",
+        "date" : "",
+        "present" : true,
+        "totalClasses" : 0,
+        "classesPresent" : 0,
+        "percentage" : 0.00
+    }
+]
+
+###
+//see students who are below 75
+get http://localhost:4000/teacher-app/75below
+
+
+###
+//approve leave
+put http://localhost:4000/teacher-app/approveLeave
+Content-Type: application/json
+
+{
+    "userId" : "1234",
+    "name" : "sunny",
+    "subject" : "cough",
+    "fromDate" : "",
+    "toDate" : "",
+    "description" : "high fever",
+    "approval" : "approved"
+}
+
+
+###
+//announcements
+post http://localhost:4000/teacher-app/announcements
+Content-Type: application/json
+
+{
+    "date" : "2024-08-10",
+    "time" : "4:00",
+    "message" : "come to audi"
+}
+
+
+###
+//holidays
+get http://localhost:4000/teacher-app/holidays  
+
+
+###
+//send mail to students
+post http://localhost:4000/teacher-app/send-mail
+Content-Type: application/json
+
+{
+    "userId" : 1234,
+    "email" : "rithvikvarma2541@gmail.com",
+    "percentage" : 72.29
+}
+
+###get all leaves
+get http://localhost:4000/teacher-app/all-leaves
+
+
+###send mail to all
+post http://localhost:4000/teacher-app/mail-to-all
+Content-Type: application/json
+
+[
+    {
+        "email" : "rithvikvarma2541@gmail.com",
+        "userId" : 1234,
+        "percentage" : 11.1
+    },
+    {
+        "email" : "spmmail1902@gmail.com",
+        "userId" : 1234,
+        "percentage" : 11.10938287
+    }
+]
