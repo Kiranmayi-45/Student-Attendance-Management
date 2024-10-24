@@ -85,7 +85,7 @@ Content-Type: application/json
 
 {
     "userId" : 1234,
-    "email" : "rithvikvarma2541@gmail.com",
+    "email" : "koranmayikondeti@gmail.com",
     "percentage" : 72.29
 }
 
@@ -99,7 +99,7 @@ Content-Type: application/json
 
 [
     {
-        "email" : "rithvikvarma2541@gmail.com",
+        "email" : "kiranmayikondeti2541@gmail.com",
         "userId" : 1234,
         "percentage" : 11.1
     },
